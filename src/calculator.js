@@ -18,8 +18,23 @@ function calculate() {
     const result = eval(display.textContent);
     display.textContent = result;
     history.push(display.textContent);
-    console.log("History:", history);
+    localStorage.setItem("History", history);
   } catch (error) {
     display.textContent = "Error";
   }
+}
+
+// //history
+let historyDiv = document.getElementById("history");
+let historyFromLocal = localStorage.getItem("History");
+
+function showHistory() {
+  let historyFromLocal = localStorage.getItem("History");
+  historyDiv.innerHTML = `History :- ${historyFromLocal}`;
+}
+
+function clearHistory() {
+  history = [];
+  historyDiv.innerHTML = ``;
+  localStorage.removeItem("History");
 }

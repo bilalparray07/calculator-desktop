@@ -38,11 +38,10 @@
 
 body {
   font-family: "Arial", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   margin: 0;
   background-color: var(--primary-bg-color);
+  overflow: hidden;
 }
 
 #calculator {
@@ -90,4 +89,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(66, 66, 66, 0.3);
   background-color: var(--text-color);
+}
+.history {
+  color: var(--text-color);
 }
